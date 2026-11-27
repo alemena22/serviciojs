@@ -9,6 +9,6 @@ console.log('Hola Mundo con cambios 1');
 import app from "./App.js";
 import "dotenv/config";
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log("Servidor corriendo en el puerto 3000")
 })

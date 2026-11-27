@@ -1,6 +1,7 @@
 //Configuracion de nuestro servidor
 import express from "express";
 import cors from "cors"; //Para que nuestro servidor pueda recibir peticiones.
+import tareasRouter from "./Service/TareaService.js";
 
 //Crear una instancia de express
 const app = express();
@@ -12,5 +13,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Hola Mundo, desde mi servidor de express")
 });
+app.use("/tareas", tareasRouter);
 //Exportar para poder usarlo en el index.js
 export default app;
